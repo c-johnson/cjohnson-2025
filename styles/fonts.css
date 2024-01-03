@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('/assets/fonts/EBGaramond-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal; /* or 700 for bold, etc. */
+    font-style: normal; /* or italic */
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('/assets/fonts/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal; /* or 700 for bold, etc. */
+    font-style: italic; /* or italic */
+}
