@@ -5,7 +5,6 @@
   display: block;
 }
 
-
 /* Layout */
 
 .body-main {
@@ -66,6 +65,11 @@
   margin-top: 20px;
 }
 
+.content-main-body .text-heading {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .content-main-banner {
   margin-bottom: 30px;
 }
@@ -98,43 +102,4 @@
   display: inline;
   width: 128px;
   float: right;
-}
-
-/* Typography */
-
-.text-body, p {
-  font-family: "EB Garamond";
-  font-size: 18px;
-  line-height: 23px;
-}
-
-.text-caption {
-  font-family: "EB Garamond";
-  font-size: 11px;
-  line-height: 11px;
-}
-
-.text-bold {
-  font-weight: 900;
-}
-
-.link-primary {
-  color: #539403;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.link-secondary {
-  color: #074966; 
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.link-nav {
-  color: #000; 
-  text-decoration: none;
-}
-
-.link-nav:hover {
-  font-weight: bold;
 }
