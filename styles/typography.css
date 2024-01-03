@@ -27,19 +27,30 @@
   color: #539403;
   font-weight: bold;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.link-primary:hover {
+  border-bottom: 1px solid #539403;
 }
 
 .link-secondary {
   color: #074966; 
   font-weight: bold;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.link-secondary:hover {
+  border-bottom: 1px solid #074966;;
 }
 
 .link-nav {
   color: #000; 
   text-decoration: none;
+  border-bottom: 1px solid transparent;
 }
 
 .link-nav:hover {
-  font-weight: bold;
+  border-bottom: 1px solid #539403;
 }

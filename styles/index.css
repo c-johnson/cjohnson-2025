@@ -98,6 +98,14 @@
   border-bottom: 1px solid #000;
 }
 
+.nav-main .link-nav {
+  /* width: 120px; */
+  /* text-align: center; */
+
+  /* flex-grow: 1; */
+  /* flex-basis: 120px; Adjust as needed */
+}
+
 .logo-inline {
   display: inline;
   width: 128px;
