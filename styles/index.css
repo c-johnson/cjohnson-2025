@@ -110,4 +110,7 @@
   display: inline;
   width: 128px;
   float: right;
+
+  margin-left: 12px;
+  /* margin-bottom: 4px; */
 }
