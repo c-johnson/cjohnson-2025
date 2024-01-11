@@ -106,19 +106,34 @@
   margin-left: 12px;
 }
 
+/* Home page */
+
 .project-spotlight-details {
-  margin-top: 8px;
+  margin-top: 2px;
 }
 
 /* Work page */
 
 .work-history {
-  margin-top: 12px;
+  margin-top: 50px;
 }
 
 .work-history p {
   margin-top: 24px;
   margin-bottom: 24px;
+}
+
+.work-history ul * {
+  font-size: 14px;
+}
+
+.work-summary .text-heading {
+  margin: 30px 0 30px;
+}
+
+.work-summary ul {
+  margin-top: 0;
+  /* margin-bottom: 40px; */
 }
 
 /* Gallery */
@@ -155,6 +170,6 @@
 
 /* Utility / misc */
 
-.no-marg {
+/* .no-marg {
   margin: 0;
-}
+} */

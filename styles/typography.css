@@ -1,33 +1,32 @@
 /* Typography */
 
-.text-body, .text-body *, p {
+*, .text-body, .text-body *, p {
   font-family: "EB Garamond";
   font-size: 18px;
-  line-height: 23px;
+  line-height: 23px;  
 }
 
-.text-heading-1, h1 {
-  font-family: "EB Garamond";
-  font-size: 32px;
-  line-height: 38px;
-  font-weight: bold;
-}
-
-.text-heading-2, h2 {
-  font-family: "EB Garamond";
+.text-heading, .text-heading *, h2, h3, h4, h5 {
   font-size: 24px;
   line-height: 32px;
-  font-weight: bold;
 }
 
-.text-caption {
-  font-family: "EB Garamond";
+.text-title, .text-title *, h1 {
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.text-caption, .text-caption *, caption {
   font-size: 11px;
   line-height: 11px;
 }
 
 .text-bold {
-  font-weight: 900;
+  font-weight: bold;
+}
+
+.text-regular {
+  font-weight: normal;
 }
 
 .text-center {
@@ -60,6 +59,9 @@
   color: #000; 
   text-decoration: none;
   border-bottom: 1px solid transparent;
+
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .link-nav:hover, .link-nav.link-active {
