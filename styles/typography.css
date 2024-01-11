@@ -37,7 +37,7 @@
   border-bottom: 1px solid transparent;
 }
 
-.link-primary:hover {
+.link-primary:hover, .link-primary.link-active {
   border-bottom: 1px solid #539403;
 }
 
@@ -48,7 +48,7 @@
   border-bottom: 1px solid transparent;
 }
 
-.link-secondary:hover {
+.link-secondary:hover, .link-secondary.link-active {
   border-bottom: 1px solid #074966;;
 }
 
@@ -58,6 +58,6 @@
   border-bottom: 1px solid transparent;
 }
 
-.link-nav:hover {
+.link-nav:hover, .link-nav.link-active {
   border-bottom: 1px solid #539403;
 }

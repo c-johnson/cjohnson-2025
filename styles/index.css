@@ -118,3 +118,35 @@
 .project-spotlight-details {
   margin-top: 8px;
 }
+
+/* Construction area */
+
+.construction-area {
+  background: white;
+  margin: 80px auto 0;
+  max-width: 400px;
+  
+  > h2 {
+    padding: 10px;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  > p {
+    padding: 0;
+  }
+}
+
+.construction-stripes {
+  color: white;
+  background: repeating-linear-gradient(
+    45deg,
+    yellow,
+    yellow 10px,
+    black 10px,
+    black 20px
+  );
+}
+
+.construction-text {
+  text-align: center;
+}
