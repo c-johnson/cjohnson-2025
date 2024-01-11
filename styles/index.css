@@ -98,28 +98,30 @@
   border-bottom: 1px solid #000;
 }
 
-.nav-main .link-nav {
-  /* width: 120px; */
-  /* text-align: center; */
-
-  /* flex-grow: 1; */
-  /* flex-basis: 120px; Adjust as needed */
-}
-
 .logo-inline {
   display: inline;
   width: 128px;
   float: right;
 
   margin-left: 12px;
-  /* margin-bottom: 4px; */
 }
 
 .project-spotlight-details {
   margin-top: 8px;
 }
 
-/* Construction area */
+/* Work page */
+
+.work-history {
+  margin-top: 12px;
+}
+
+.work-history p {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+/* Gallery */
 
 .construction-area {
   background: white;
@@ -149,4 +151,10 @@
 
 .construction-text {
   text-align: center;
+}
+
+/* Utility / misc */
+
+.no-marg {
+  margin: 0;
 }
