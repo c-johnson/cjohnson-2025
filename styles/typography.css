@@ -1,9 +1,9 @@
 /* Typography */
 
 *, .text-body, .text-body *, p {
-  font-family: "EB Garamond";
-  font-size: 18px;
-  line-height: 23px;  
+  font-family: "Cabin";
+  font-size: 16px;
+  line-height: 22px;  
 }
 
 .text-heading, .text-heading *, h2, h3, h4, h5 {
@@ -14,6 +14,8 @@
 .text-title, .text-title *, h1 {
   font-size: 32px;
   line-height: 38px;
+
+  font-family: "EB Garamond";
 }
 
 .text-caption, .text-caption *, caption {
@@ -62,6 +64,8 @@
 
   font-size: 16px;
   line-height: 16px;
+
+  font-family: "EB Garamond";
 }
 
 .link-nav:hover, .link-nav.link-active {
