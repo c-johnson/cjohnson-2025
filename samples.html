@@ -53,20 +53,55 @@
         <div>
         <form>
           <div class="toast-notification marquee-container">
-            <div class="marquee" style="color: green;">Text submitted successfully.</div>
+            <div id="text-submit-1-notification" class="marquee paused" style="color: green;">Text submitted successfully.</div>
           </div>
           <div style="padding: 12px; display: flex; justify-content: space-between;">
             <div>
-              <label for="sample-input" style="margin-right:12px" >Text input</label>
-              <input name="sample-input" type="text"></input>
+              <label for="text-submit-1-input" style="margin-right:12px" >Text input</label>
+              <input name="sample-input" type="text" id="text-submit-1-input"></input>
             </div>
             <div>
-              <button type="submit">Submit</button>
+              <button type="button" id="text-submit-1">Submit</button>
             </div>
           </div>
         </form>
         </div>
       </div>
     </div>
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function() {
+        // Your code here
+        console.log("DOM is fully loaded and parsed");
+
+        const textSubmit1Button = document.getElementById('text-submit-1');
+        const textSubmit1Notification = document.getElementById('text-submit-1-notification');
+        const textSubmit1Input = document.getElementById('text-submit-1-input');
+
+        textSubmit1Button.addEventListener('click', (event) => {
+          event.stopPropagation();
+          event.stopImmediatePropagation();
+
+          textSubmit1Input.value = "";
+
+          textSubmit1Notification.classList.add('running');
+          textSubmit1Notification.classList.remove('paused');
+
+          setTimeout(() => {
+            textSubmit1Notification.classList.add('paused');
+            textSubmit1Notification.classList.remove('running');
+          }, 1000);
+
+          setTimeout(() => {
+            textSubmit1Notification.classList.add('running');
+            textSubmit1Notification.classList.remove('paused');
+          }, 2000);
+
+          setTimeout(() => {
+            textSubmit1Notification.classList.add('hidden');
+          }, 3000);
+        });
+      });      
+    </script>
   </body>
 </html>

@@ -191,19 +191,31 @@
   top: 2.5em;
 
   position: relative;
-  animation: marquee 1s ease-in;
+  animation: marquee 2s ease-in;
 }
 
-.marquee:hover {
+.marquee.running {
+  animation-play-state: running;
+}
+
+.marquee:hover,
+.marquee.paused {
   animation-play-state: paused;
+}
+
+.marquee.hidden {
+  visibility: hidden;
 }
 
 @keyframes marquee {
   0% {
     top: 4em;
   }
-  100% {
+  50% {
     top: 2.5em;
+  }
+  100% {
+    top: 4em;
   }
 }
 
