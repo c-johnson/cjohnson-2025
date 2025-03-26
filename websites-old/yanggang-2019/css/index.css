@@ -1,0 +1,91 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 72px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 48px;
+
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.container-sm {
+  max-width: 600px;
+}
+
+.container .header {
+  display: flex;
+  padding: 20px 0;
+}
+
+.btn-cta {
+  background-color: #D00A22;
+  color: white;
+
+  padding: 1.5rem 2rem;
+}
+
+section {
+  padding: 60px 0;
+}
+
+section.section-hero {
+  padding: 30px 0;
+}
+
+.section-hero h1 {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.section-hero img {
+  margin: 0 auto;
+  display: block;
+}
+
+.section-join-fight {
+  background-color: #002975;
+  color: white;
+}
+
+.section-join-fight h2 {
+  font-style: italic;
+}
+
+.section-join-fight * {
+  color: white;
+}
+
+.section-start-caravan {
+  background-color: #5B0319;
+  color: white;
+}
+
+.section-start-caravan * {
+  color: white;
+}
+
+.btn-cta-lg {
+  font-size: 48px;
+  display: block;
+  margin: 0 auto;
+  padding: 30px 50px;
+  color: white;
+  background-color: #002975;
+}
