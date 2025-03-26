@@ -1,0 +1,45 @@
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  padding-top: 65px;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 500;
+  display: inline-block;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #bbb;
+}
+
+.bask-amp {
+  font-family: Baskerville, serif;
+  font-style: italic;
+  font-size: 50px;
+  margin: 0 -5px;
+}
+
+.center {
+  text-align: center;
+}
+
+.subtitle {
+  position: relative;
+  bottom: 32px;
+  font-size: 16px;
+  background-color: white;
+  padding: 0 10px;
+  font-weight: bold;
+  display: inline;
+}
+
+.announcement {
+  font-family: 'Alegreya Sans', serif;
+  font-size: 14px;
+  margin-top: 300px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+}

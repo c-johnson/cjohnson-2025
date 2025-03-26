@@ -1,0 +1,26 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+<header>
+  <div class="container">
+    <div class="row center">
+      <div class="title-box">
+        <h1 class="bkhm">Bitchin <span class="bask-amp">&amp;</span> Moanin</h1>
+      </div>
+      <h3 class="subtitle modesto">with Sam and Chris</h3>
+      <div class="announcement">
+        <span>Coming Spring 2014 ...ish</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      {{template "flash.html" .}}
+    </div>
+  </div>
+</div>
+
+{{template "footer.html" .}}

@@ -1,0 +1,21 @@
+{
+  "name": "bnm",
+  "host": "198.199.117.27",
+  "target_dir": "/home/bnm/gowrk/src/github.com/c-johnson/bnm",
+  "cmds": [
+    "git pull origin master",
+    "grunt",
+    "nohup revel run $BNM &"
+  ],
+  "start": {
+    "dir": "/Users/chris/ciqss/proj/bnm",
+    "hangs": [
+      "revel run $BNM",
+      "grunt watch"
+    ],
+    "nohangs": [
+      "open http://localhost:9000",
+      "subl ~/proj/bnm"
+    ]
+  }
+}
