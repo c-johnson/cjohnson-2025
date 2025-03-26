@@ -1,0 +1,321 @@
+<!doctype html>
+<html class="no-js no-responsive">
+  <head>
+    <meta charset="utf-8">
+    <title>Nerdery Test Application</title>
+    <meta name="description" content="A website I'm making for the Nerdery, to assess my front-end mastery.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script type="text/javascript" src="scripts/selectivizr.js"></script>
+    <![endif]-->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header class="main-header">
+      <div class="container">
+        <img src="/images/logo.png" alt="Logo for Crispin and Mulburry">
+        <div class="main-header-actions">
+          <div class="main-header-search">
+            <input type="text" placeholder="Search">
+            <img class="icon" src="/images/icons/search.png">
+          </div>
+
+          <ul>
+             <li><a href="#">My Account</a></li>
+             <span class="divider">|</span>
+             <li><a href="#">My Subscriptions</a></li>
+             <span class="divider">|</span>
+             <li><a href="#">My Articles</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-container container">
+      <ul class="nav-tabs" data-tab-navigation>
+        <li><a href="javascript:void(0);">Destinations</a></li>
+        <li><a href="javascript:void(0);">Getaways</a></li>
+        <li><a href="javascript:void(0);">Travel Tips</a></li>
+        <li class="active" data-page="4"><a href="javascript:void(0);">News & Features</a></li>
+        <li><a href="javascript:void(0);">Contests</a></li>
+        <li><a href="javascript:void(0);">Contact Us</a></li>
+      </ul>
+
+      <div class="main-content tab-content" data-page="nocontent">
+        <h1>There's no content for this tab yet!  Come back later!</h1>
+      </div>
+
+      <div class="main-content tab-content tab-active" data-page="content">
+        <div class="row">
+          <section class="main-left-col" data-carousel>
+            <ul class="carousel-main" data-carousel-slides>
+              <li data-slide="1" class="carousel-slide carousel-active">
+                <img src="/images/carousel-slide-1.jpg" alt="Check out the USS Torsk at Baltimore’s historic Maritime Museum.">
+                <label class="img-caption">
+                  <h1>Downtown Baltimore</h1>
+                  <p>Check out the USS Torsk at Baltimore’s historic Maritime Museum.</p>
+                </label>
+              </li>
+              <li data-slide="2" class="carousel-slide">
+                <img src="/images/carousel-slide-2.jpg" alt="Enjoy the best gondola ride on this side of the Atlantic Ocean.">
+                <label class="img-caption">
+                  <h1>Exploring the Venetian</h1>
+                  <p>Enjoy the best gondola ride on this side of the Atlantic Ocean.</p>
+                </label>
+              </li>
+              <li data-slide="3" class="carousel-slide">
+                <img src="/images/carousel-slide-3.jpg" alt="Enjoy the pubs along the river Thames &amp; get spectacular view from the London Eye.">
+                <label class="img-caption">
+                  <h1>London After Dark</h1>
+                  <p>Enjoy the pubs along the river Thames &amp; get spectacular view from the London Eye.</p>
+                </label>
+              </li>
+              <li data-slide="4" class="carousel-slide">
+                <img src="/images/carousel-slide-4.jpg" alt="Marvel at the majestic beauty of the Black Hills and come face to face with American history.">
+                <label class="img-caption">
+                  <h1>Mount Rushmore</h1>
+                  <p>Marvel at the majestic beauty of the Black Hills and come face to face with American history.</p>
+                </label>
+              </li>
+            </ul>
+
+            <ul class="carousel-thumbs" data-carousel-thumbs>
+              <li data-slide-id="1" class="active"><a href="javascript:void(0);"><img src="/images/carousel-thumb-1.jpg" alt="Downtown Baltimore"></a></li>
+              <li data-slide-id="2"><a href="javascript:void(0);"><img src="/images/carousel-thumb-2.jpg" alt="Exploring the Venetian"></a></li>
+              <li data-slide-id="3"><a href="javascript:void(0);"><img src="/images/carousel-thumb-3.jpg" alt="London After Dark"></a></li>
+              <li data-slide-id="4"><a href="javascript:void(0);"><img src="/images/carousel-thumb-4.jpg" alt="Mount Rushmore"></a></li>
+            </ul>
+          </section>
+          <section class="main-right-col">
+            <img class="gutter-bottom" src="/images/main-ad-1.jpg" alt="An ad for Holiday Inn (Save up to 20%!)">
+            <img src="/images/main-ad-2.jpg" alt="An ad for Dreamwork's Rise of the Guardians">
+          </section>
+        </div>
+
+        <hr >
+
+        <div class="row">
+          <div class="main-left-col">
+            <div class="row">
+              <section class="browse-categories">
+                <div class="heading heading-primary heading-overhang">
+                  <img class="icon" src="/images/icons/folder.png">
+                  <h3>Browse Categories</h3>
+                </div>
+
+                <h4 data-collapse-ctrl="1">Popular Destinations <span class="icon-triangle"></span></h4>
+                <ul data-collapse-body="1" class="collapsable">
+                  <li><a href="#">United States</a></li>
+                  <li><a href="#">Europe</a></li>
+                  <li><a href="#">Latin America</a></li>
+                  <li><a href="#">South Pacific</a></li>
+                  <li><a href="#">Carribean</a></li>
+                  <li><a href="#">Australia</a></li>
+                  <li><a href="#">All Destinations</a></li>
+                </ul>
+
+                <h4 data-collapse-ctrl="2">Getaways <span class="icon-triangle"></span></h4>
+                <ul data-collapse-body="2" class="collapsable">
+                  <li><a href="#">Adventure Vacations</a></li>
+                  <li><a href="#">Beach Vacations</a></li>
+                  <li><a href="#">Cruise Vacations</a></li>
+                  <li><a href="#">Culinary Vacations</a></li>
+                  <li><a href="#">Family Vacations</a></li>
+                  <li><a href="#">Luxury Vacations</a></li>
+                  <li><a href="#">Romantic Vacations</a></li>
+                  <li><a href="#">Ski Vacations</a></li>
+                  <li><a href="#">All Vacations</a></li>
+                </ul>
+              </section>
+              <section class="recent-articles">
+                <div class="heading heading-primary">
+                  <img class="icon" src="/images/icons/hamburger.png">
+                  <h3>Recent Articles</h3>
+                </div>
+                <ul>
+                  <li>
+                    <img src="/images/article-img-1.jpg" alt="Mickey Mouse at DisneyWorld">
+                    <article>
+                      <h2>Don't Miss the Parades at DisneyWorld</h2>
+                      <p>
+                        The parades at Disney World are a one of a kind celebration full of all your favorite Disney characters and music. The entertainment never stops as parades are scheduled throughout the entire day.
+                      </p>
+                    </article>
+                  </li>
+                  <li>
+                    <img src="/images/article-img-2.jpg" alt="A Welcome to Downtown Las Vegas sign">
+                    <article>
+                      <h2>Get Your Kicks in Downtown Las Vegas</h2>
+                      <p>
+                        Get off the strip and check out what Old Vegas has to offer. From shark infested water slides to the nightly Fremont Street Experience it’s sure to please adventurers of all ages.
+                      </p>
+                    </article>
+                  </li>
+                  <li>
+                    <img src="/images/article-img-3.jpg" alt="A picture of Chicago's skyline">
+                    <article>
+                      <h2>Don’t Miss Deep Dish in Chicago</h2>
+                      <p>
+                        Deep dish pizza is as synonymous with Chicago as Thin Crust is to New York. Any way you slice it, any trip to the windy city is incomplete without an italian flavor explosion in your mouth.
+                      </p>
+                    </article>
+                  </li>
+                </ul>
+              </section>
+            </div>
+
+            <section class="popular-videos">
+              <div class="heading heading-primary heading-overhang">
+                <img class="icon" src="/images/icons/video.png">
+                <h3>Popular Videos</h3>
+              </div>
+              <ul class="video-thumbs">
+                <li class="video-thumb">
+                  <img src="/images/popular-videos-img-1.jpg" alt="Team Mongoose headquarters">
+                  <label class="img-caption">Team Mongoose</label>
+                </li>
+                <li class="video-thumb">
+                  <img src="/images/popular-videos-img-2.jpg" alt="St. Paul's Cathedral">
+                  <label class="img-caption">St Paul's Cathedral</label>
+                </li>
+                <li class="video-thumb">
+                  <img src="/images/popular-videos-img-3.jpg" alt="A shopping mall at Hollywood center">
+                  <label class="img-caption">Hollywood and Highland</label>
+                </li>
+                <li class="video-thumb">
+                  <img src="/images/popular-videos-img-4.jpg" alt="A hollowed-out tree stump">
+                  <label class="img-caption">Lake Wissota</label>
+                </li>
+                <li class="video-thumb">
+                  <img src="/images/popular-videos-img-5.jpg" alt="The Bellagio at nighttime">
+                  <label class="img-caption">The Bellagio Fountains</label>
+                </li>
+                <li class="video-thumb">
+                  <img src="/images/popular-videos-img-6.jpg" alt="A beach on the Atlantic Ocean">
+                  <label class="img-caption">The Atlantic Coast</label>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div class="main-right-col">
+            <section class="sign-up cta-box">
+              <div class="heading">
+                <img src="images/icons/envelope.png">
+                <h3>Sign up for our newsletter</h3>
+              </div> 
+              <hr>
+              <form method="POST" action="/subscribers">
+                <input type="text" name="email" placeholder="user@domain.com">
+
+                <div class="well">
+                  <span class="prompt">Select the newsletters you'd like to recieve</span class="prompt">
+                  <div class="options">
+                    <label>
+                      <input type="checkbox" name="newsletters" value="destinations">
+                      Destinations & Getaways
+                    </label>
+                    <label>
+                      <input type="checkbox" name="newsletters" value="weeklyTips">
+                      Weekly Travel Tips
+                    </label>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+              </form>
+              <div class="cta-footer">
+                <a href="#">Privacy Policy</a>
+                <span class="divider">|</span>
+                <a href="#">Terms of Use</a>
+              </div>
+            </section>
+            <section class="current-contests cta-box">
+              <div class="heading">
+                <img src="images/icons/trophy.png">
+                <h3>Current Contests</h3>
+              </div> 
+              <hr>
+              <ul>
+                <li>
+                  <img src="images/current-contests-img-1.jpg">
+                  <caption><a href="#">Win an all inclusive trip to visit the famous Yeti Shrine deep in the heart of Asia</a></caption>
+                </li>
+                <li>
+                  <img src="images/current-contests-img-2.jpg">
+                  <a href="#">Win a mystical trip to Bath that includes a guided tour of Stonehenge</a>
+                </li>
+              </ul>
+            </section>
+            <a class="twitter-timeline" href="https://twitter.com/crispinmulberry" data-widget-id="317675886658863104">Tweets by @crispinmulberry</a>
+            <script>
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+            </script>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <footer class="main-footer container">
+      <ul class="social-media">
+        <li><a href="#"><img src="/images/icons/facebook.png"></a></li>
+        <li><a href="#"><img src="/images/icons/flickr.png"></a></li>
+        <li><a href="#"><img src="/images/icons/twitter.png"></a></li>
+        <li><a href="#"><img src="/images/icons/venmo.png"></a></li>
+        <li><a href="#"><img src="/images/icons/rss.png"></a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <span class="divider">|</span>
+        <li><a href="#">Terms of Use</a></li>
+        <span class="divider">|</span>
+        <li><a href="#">Site Map</a></li>
+        <span class="divider">|</span>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <div class="copyright">© 2013 Crispin & Mulberry<span class="divider">|</span>1640 Riverside Drive, Hill Valley, California, 95420</div>
+    </footer>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script type="text/javascript" src="scripts/ie8.js"></script>
+    <![endif]-->
+  </body>
+</html>

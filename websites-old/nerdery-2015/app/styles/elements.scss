@@ -1,0 +1,269 @@
+@import 'vars';
+@import 'elements/carousel';
+
+.divider {
+  padding: 0 5px;
+}
+
+.btn {
+  border: none;
+  padding: 6px 11px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #0084d9;
+
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Triangle provided by:  http://apps.eky.hk/css-triangle-generator/ */
+
+.icon-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8.7px 5px 0 5px;
+  border-color: #282b2e transparent transparent transparent;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+ul.norm-ul {
+  padding-left: 40;
+  list-style-type: disc;
+}
+
+ul.nav-tabs {
+  a {
+    margin-right: -4px;
+    padding: 14px 36px 11px;
+    display: inline-block;
+
+    border-top: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+
+    color: #5f6062;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-shadow: 1px 1px white;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      background-color: rgba(72, 85, 102, .16);
+    }
+  }
+
+  li {
+    height: 40px;
+    display: inline-block;
+
+    &:last-child a {
+      padding-right: 40px;
+    }
+
+    &.active a {
+      margin-top: -6px;
+      padding-top: 19px;
+
+      background-color: white;
+      border-left: 1px solid #bdbdbd;
+      border-right: 1px solid #bdbdbd;
+      border-bottom: none;
+    }
+  }
+
+  background: linear-gradient(to top, rgba(0,0,0,.19), rgba(255,255,255,.19));
+}
+
+.heading {
+  padding: 9px;
+
+  h3 {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+  }
+
+  .icon {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.heading-primary {
+  background-color: $blue;
+
+  h3 {
+    color: white;
+  }
+}
+
+.heading-overhang {
+  position: relative;
+  left: -33px;
+  width: calc(100% + 33px);
+
+  &:after {
+    position: absolute;
+    display: block;
+    
+    width: 13px;
+    height: 5px;
+    bottom: -5px;
+    left: 0px;
+
+    background-image: url("/images/icons/heading-fold.png");
+    content: "";
+  }
+}
+
+.cta-box {
+  background-color: #dbdbdb;
+  padding: 10px;
+  margin-bottom: 20px;
+  overflow: auto;
+
+  img {
+    float: left;
+    margin: 1px 10px 0 0;
+  }
+
+  h3 {
+    line-height: 13px;
+  }
+
+  hr {
+    opacity: 1;
+    margin: 10px 0;
+    border-bottom: none;
+  }
+
+  input[type="text"] {
+    padding: 4px 7px;
+    width: 100%;
+    margin: 1px 0 2px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+  }
+
+  label + label {
+    margin-top: 2px;
+  }
+
+  .heading {
+    background-color: #dbdbdb;
+    padding: 0;
+  }
+
+  .well {
+    padding: 9px;
+    margin: 10px 0;
+    background-color: #cac9c9;
+  }
+
+  .prompt {
+    font-style: italic;
+  }
+
+  .options {
+    margin-top: 8px;
+  }
+}
+
+.cta-footer {
+  clear: both;
+  margin: 0 -10px -10px;
+
+  text-align: center;
+
+  line-height: 24px;
+  background-color: #cac9c9;
+  border-top: 1px solid #969696;
+}
+
+.img-caption {
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  background-color: rgb(227,227,227);
+  background-color: rgba(227,227,227,.8);
+}
+
+.video-thumbs {
+  padding-top: 20px;
+  margin-left: -20px;
+}
+
+.video-thumb {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  margin: 0 -2px 20px 20px;
+
+  label {
+    line-height: 30px;
+    font-weight: bold;
+    padding: 0 15px;
+  }
+
+  &:before {
+    position: absolute;
+    top: 32%;
+    left: 39%;
+    display: block;
+    content: "";
+    background-color: rgb(40, 43, 46);
+    background-color: rgba(40, 43, 46, .7);
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+  }
+
+  &:after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 17.3px;
+    border-color: transparent transparent transparent #d7d5d6;
+    position: absolute;
+    top: 39%;
+    left: 46%;
+    display: block;
+    content: "";
+  }
+}
+
+.collapsable {
+  transition: max-height 0.6s ease;
+  overflow: hidden;
+  max-height: 200px;
+
+  &.collapsed {
+    max-height: 0;
+  } 
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: black;
+  padding: 0.2em 0;
+}

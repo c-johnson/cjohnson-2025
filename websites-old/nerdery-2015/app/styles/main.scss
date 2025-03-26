@@ -1,0 +1,125 @@
+@import 'vars';
+@import 'header';
+@import 'footer';
+@import 'layout';
+@import 'elements';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #3378ce;
+  background: url('/images/main-bg.jpg') center top no-repeat;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #282b2e;
+}
+
+a {
+  color: #282b2e;
+  text-decoration: none;
+}
+
+/* IE8 fix */
+a img {
+  border: none;
+}
+
+hr {
+  width: 100%;
+  margin: 20px 0;
+
+  // TODO:  For some reason, I can't get this lighter... this is mega hacky but it's close
+  opacity: .5;
+  // border-color: white;
+}
+
+.main-container {
+  background: white;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+section.browse-categories {
+  width: 176px;
+  float: left;
+  font-size: 14px;
+  margin-right: 20px;
+
+  h4 {
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+
+  li {
+    margin-bottom: 2px;
+  }
+
+  .heading::before {
+    position: absolute;
+    top: 0;
+    left: -33px;
+  }
+
+  .icon-triangle {
+    position: relative;
+    top: 14px;
+    left: 8px;
+  }
+}
+
+section.recent-articles {
+  width: 470px;
+  float: left;
+
+  li {
+    clear: both;
+    height: 105px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  h2, p {
+    margin: 0 0 5px;
+    font-size: 14px;
+  }
+
+  img {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .article {
+    float: left;
+  }
+
+  .heading {
+    margin-bottom: 20px;
+  }
+}
+
+section.sign-up {
+  .btn-primary {
+    float: right;
+    margin-bottom: 10px;
+  }
+}
+
+section.current-contests {
+  li {
+    display: block;
+    overflow: auto;
+  }
+
+  li + li {
+    margin-top: 10px;
+  }
+
+  a {
+    font-weight: bold;
+    line-height: 17px;
+  }
+}
