@@ -1,0 +1,15 @@
+{
+  "name": "mainst",
+  "host": "192.241.185.104",
+  "target_dir": "/home/chome/gowrk/src/github.com/c-johnson/mainst",
+  "start": {
+    "dir": "/Users/chris/ciqss/proj/dadweb/mainst",
+    "hangs": [
+      "rails s"
+    ],
+    "nohangs": [
+      "open http://localhost:3000",
+      "subl ~/proj/dadweb/mainst"
+    ]
+  }
+}

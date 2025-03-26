@@ -1,0 +1,21 @@
+@import "globals/vars";
+
+h1 {
+  margin: 0;
+}
+
+.inline {
+  display: inline;
+}
+
+.green {
+  color: $green !important;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.border {
+  border: 1px solid $gray;
+}
