@@ -1,0 +1,18 @@
+	var chris = 'sup';		
+	var toAppend = '<div class="extend">'.chris.'</div>';
+	
+	('
+		<p>
+			Chris Johnson is a sophomore at the University of Nebraska-Lincoln’s Jeffrey S Raikes School for Computer Science and Management. He is currently double majoring in computer science and economics, and has a strong passion in regional economic development and energy. He was born in Parkville, Missouri, a small suburb of Kansas City. He enjoys watching movies, reading books, keeping up with global politics, and playing loud rock songs on his Alvarez guitar.
+		</p>
+		<p>
+			Chris maintains the website for the World Energy Project. He helps with presentation, publicity, fundraising, and general team cheerleading. His interest in developmental economics began in high school, and after being inspired by several stories of entrepreneurial philanthropy in Africa during college was asked by Ashley to be a part of the World Energy Project team.  He’s very excited to be working on this project and looks forward to future philanthropic efforts.
+		</p>
+	');
+	
+	var book = {
+		'chris' = '<p>Chris Johnson is a sophomore at the University of Nebraska-Lincoln’s Jeffrey S Raikes School for Computer Science and Management. He is currently double majoring in computer science and economics, and has a strong passion in regional economic development and energy. He was born in Parkville, Missouri, a small suburb of Kansas City. He enjoys watching movies, reading books, keeping up with global politics, and playing loud rock songs on his Alvarez guitar.</p><p>Chris maintains the website for the World Energy Project. He helps with presentation, publicity, fundraising, and general team cheerleading. His interest in developmental economics began in high school, and after being inspired by several stories of entrepreneurial philanthropy in Africa during college was asked by Ashley to be a part of the World Energy Project team.  He’s very excited to be working on this project and looks forward to future philanthropic efforts.</p>';
+	}
+	
+			$(theString).appendTo(this);
+			$('.extend').remove();

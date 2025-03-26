@@ -1,0 +1,892 @@
+/* 
+  HTML5 ✰ Boilerplate 
+  
+  style.css contains a reset, font normalization and some base styles.
+  
+  credit is left where credit is due.
+  much inspiration was taken from these projects:
+    yui.yahooapis.com/2.8.1/build/base/base.css
+    camendesign.com/design/
+    praegnanz.de/weblog/htmlcssjs-kickstart
+*/
+
+/* 
+  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+  html5doctor.com/html-5-reset-stylesheet/
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}                  
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { 
+    display:block;
+}
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+
+a { margin:0; padding:0; text-decoration:none; font-size:100%; vertical-align:baseline; background:transparent; }
+
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
+
+/* tables still need cellspacing="0" in the markup */
+table { border-collapse:collapse; border-spacing:0; }
+
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+
+input, select { vertical-align:middle; }
+
+/* END RESET CSS */
+
+
+/* fonts.css from the YUI Library: developer.yahoo.com/yui/
+   Refer to developer.yahoo.com/yui/3/cssfonts/ for font sizing percentages
+
+  There are three custom edits:
+   * remove arial, helvetica from explicit font stack
+   * we normalize monospace styles ourselves
+   * table font-size is reset in the HTML5 reset above so there is no need to repeat
+*/
+body { 
+	font:12px/18px Arial, sans-serif; *font-size:small; 
+	background:url(../images/bg_slice_nofoot.png) left top;
+	font-weight:0.9;
+} /* hack retained to preserve specificity */
+
+select, input, textarea, button { font:99% sans-serif; }
+
+/* normalize monospace sizing 
+ * en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome
+ */
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+/* 
+ * minimal base styles 
+ */
+
+body, select, input, textarea { 
+  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */ 
+  color: #fff; 
+  /* set your base font here, to apply evenly */
+  font-family: 14px Arial, serif;  */   
+}
+
+/* Headers (h1,h2,etc) have no default font-size or margin,
+   you'll want to define those yourself. */ 
+h1,h2,h3,h4,h5,h6 { font-weight: bold; }
+
+/* always force a scrollbar in non-IE */ 
+html { overflow-y: scroll; }
+
+ 
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: none; }
+
+a, a:active, a:visited { color: #fff; }
+a:hover { color: #CCC; }
+
+
+ul, ol { margin-left: 1.8em; }
+ol { list-style-type: decimal; }
+
+/* Remove margins for navigation lists */
+nav ul, nav li { margin: 0; } 
+
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+
+td, td img { vertical-align: top; } 
+
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+
+pre { 
+  padding: 15px; 
+  
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+}
+ 
+textarea { overflow: auto; } /* thnx ivannikolic! www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
+
+.ie6 legend, .ie7 legend { margin-left: -7px; } /* thnx ivannikolic! */
+
+/* align checkboxes, radios, text inputs with their label
+   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+ 
+/* webkit browsers add a 2px margin outside the chrome of form elements */  
+button, input, select, textarea { margin: 0; }
+
+/* colors for form validity */
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid { 
+      border-radius: 1px;
+    -moz-box-shadow: 0px 0px 5px red; 
+ -webkit-box-shadow: 0px 0px 5px red; 
+         box-shadow: 0px 0px 5px red;
+}
+.no-boxshadow input:invalid, 
+.no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+
+/* These selection declarations have to be separate.
+   No text-shadow: twitter.com/miketaylr/status/12228805301 
+   Also: hot pink. */
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; } 
+
+/*  j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: #FF5E99; } 
+
+/* make buttons play nice in IE:    
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {  width: auto; overflow: visible; }
+ 
+/* bicubic resizing for non-native sized IMG: 
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+
+
+/* 
+ * Non-semantic helper classes 
+ */
+
+/* for image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+
+/* Hide for both screenreaders and browsers
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; } 
+
+/* Hide only visually, but have it available for screenreaders 
+   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
+.visuallyhidden { position: absolute !important;    
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* >> The Magnificent CLEARFIX: Updated to prevent margin-collapsing on child elements << j.mp/bestclearfix */
+.clearfix:before, .clearfix:after {
+  content: "\0020"; display: block; height: 0; visibility: hidden;	
+} 
+
+.clearfix:after { clear: both; }
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix { zoom: 1; }
+
+
+
+
+
+
+ /* Primary Styles
+    Author: 
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Media queries for responsive design
+ * These follow after primary styles so they will successfully override. 
+ */
+
+@media all and (orientation:portrait) { 
+  /* Style adjustments for portrait mode goes here */
+  
+}
+
+@media all and (orientation:landscape) { 
+  /* Style adjustments for landscape mode goes here */
+  
+}
+
+/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
+   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+  
+  
+  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you
+     j.mp/textsizeadjust 
+  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+
+/* 
+ * print styles
+ * inlined to avoid required HTTP connection www.phpied.com/delay-loading-your-print-css/ 
+ */
+@media print {
+  * { background: transparent !important; color: #444 !important; text-shadow: none !important; }
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a:after { content: " (" attr(href) ")"; } 
+  abbr:after { content: " (" attr(title) ")"; }
+  .ir a:after { content: ""; }  /* Don't show links for images */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */ 
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
+
+/*
+End of HTML5 boilerplate.  Beginning Chris's code
+*/
+
+/*
+	main
+*/
+
+.main a{
+	color:#c9ae47;
+}
+
+.main{
+	width:969px;
+	margin:0 auto;
+	font:12px/16px Arial, serif;
+}
+
+.main .main_content{
+	width:949px;
+	background:url(../images/main_bg.jpg);
+	margin:0 10px;
+}
+
+.main .img{
+	float:left;
+}
+
+.clear{
+	clear:both;
+	margin:0;
+	padding:0;
+}
+
+.heading {
+	padding:0 0 15px 0;
+}
+
+.logo{
+	font:34px Gothic ;
+	padding:0;
+	margin:0;
+	
+}
+
+#slider{
+	margin:0 0 -4px 10px;
+	padding:0;
+	width:949px;
+}
+
+#slider ul{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+
+#slider li{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+
+#slider img{
+	margin:0;
+	padding:0;
+	height:499px;
+	width:949px;
+}
+
+/*
+	block
+*/
+
+.block{
+	padding:10px 0 0 85px;
+	margin:0;
+}
+
+.block p{
+	width:387px;
+}
+
+.block a{
+	color:#c9ae47;
+}
+
+.right{
+	float:right; 
+	margin:0px 110px 0 0;
+}
+
+.right img{
+	margin:10px 0px 0px 0;
+	
+}
+
+/*
+	banner
+*/
+.banner{
+	margin: 0px 0 -6px -14px;
+}
+
+.banner ul li span{
+	margin:0 0 0 43px;
+	float:left;
+}
+
+.banner ul {
+	position:absolute;
+	margin:7px 0 0 160px;
+	padding:0;
+	list-style-type:none;
+}
+
+.banner ul li{
+	font: 14px Arial;
+	padding:0 0 0 0px; /*56px is the sweet spot*/
+	display:inline;
+	height:100%;
+	margin:0;
+}
+
+.banner a:hover img { 
+	visibility:hidden; 
+}
+
+/*
+	header
+*/
+
+.header{
+	width:949px;
+	height:184px;
+	margin: 0 auto;
+}
+
+.header .above{
+	width:949px;
+	height:134px;
+	background:url(../images/header_bg.jpg);
+	margin: 0 auto;
+}
+
+.header .above img{
+	
+}
+
+.header .nav{
+	background:url(../images/nav_bg.png);
+	height:50px;
+}
+
+.header .nav ul {
+	padding:0px 0 0 5px;
+	margin:0;
+	list-style-type:none;
+}
+
+.header .nav ul li{
+	font: 14px Arial;
+	padding:0 0 0 0px; /*56px is the sweet spot*/
+	display:inline;
+	height:100%;
+}
+
+.header .nav ul li span{
+	position:relative;
+	margin:0 0 0 43px;
+}
+
+.header #about{
+	background:url(../images/nav/about_hover.jpg);
+	height:50px;
+	width:52px; 
+}
+
+.header #whyenergy{
+	background:url(../images/nav/whyenergy_hover.jpg);
+	height:50px;
+	width:96px;
+}
+
+.header #projects{
+	background:url(../images/nav/projects_hover.jpg);
+	height:50px;
+	width:58px;
+}
+
+.header #donate{
+	background:url(../images/nav/donate_hover.jpg);
+	height:50px;
+	width:60px;
+}
+
+.header #events{
+	background:url(../images/nav/events_hover.jpg);
+	height:50px;
+	width:52px;
+}
+
+.header #blog{
+	background:url(../images/nav/blog_hover.jpg);
+	height:50px;
+	width:39px;
+}
+
+.header #contact{
+	background:url(../images/nav/contact_hover.png);
+	height:50px;
+	width:63px;
+}
+
+.header #ticker{
+	background:url(../images/ticker_glow.jpg);
+	height:125px;
+	width:89px;
+}
+
+#ticker_glower a:hover img { visibility:hidden; }
+
+#ticker_glower span{
+	float:left;
+	cursor:pointer;
+	position:absolute; 
+	z-index:8; 
+	margin:51px 0 0 294px;
+}
+
+.nav li{
+	cursor:pointer;
+}
+
+.nav ul li span{
+	float:left;
+}
+
+.nav a:hover img { visibility:hidden; }
+
+/*
+	footer
+*/
+
+.footer{
+	background:url(../images/footer_bg_slice.jpg) repeat-x;
+	margin:-7px 0 0 0;
+}
+
+.footer .footer_body{
+	width:949px;
+	height:248px;
+	margin: 0 auto;
+	color:#000;
+	font: 12px Arial;
+}
+
+.footer .nav{
+	padding:0 0 5px 0;
+}
+
+.footer .nav ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+.footer .nav ul li{
+	display:inline;
+	padding:0 10px 0 0;
+}
+
+.footer .nav span{
+	margin: 0 10px 0 0;
+}
+
+.keep_in_touch{
+	float:left;
+	margin:50px 0 0 56px;
+}
+
+.keep_in_touch img{
+	float:left;
+	margin:0 11px 5px 0;
+	padding:0;
+}
+
+.check_us_out{
+	float:right;
+	margin:36px 56px 0 0;
+}
+
+.check_us_out a{
+	color:#000;
+}
+
+.check_us_out a:hover{
+	color:#555;
+}
+
+.sitemap_row p{
+	width:100px;
+	padding:0;
+	margin:0px 10px 10px 0px;
+	float:left;
+}
+
+#fb_hover{
+	background:url(../images/footer/fb_icon_hover.png);
+	width:36px;
+	height:35px;
+}
+
+#t_hover{
+	background:url(../images/footer/t_icon_hover.png);
+	width:35px;
+	height:35px;
+}
+
+#rss_hover{
+	background:url(../images/footer/rss_icon_hover.png);
+	width:35px;
+	height:35px;
+}
+
+/*
+	home
+*/
+#home_banner{
+	margin: 29px 0 50px -14px;
+	width:993px;
+}
+
+#trio img{
+	margin:0;
+	padding:0 0 15px 0;
+}
+
+#trio p{
+	float:left;
+	margin:0 32px 0 56px;
+	padding:0;
+	width:220px;
+}
+
+#galleria{
+	margin:0 0 0 0px;
+	height:494px;
+	width:960px;
+	padding:0;
+}
+#galleria img{
+	height:494px;
+	width:942px;
+	padding:0;
+	margin:0;
+}
+
+/*
+	projects
+*/
+
+#projects_banner{
+	width:962px;
+	height:59px;
+	background:url(../images/projects/projects_banner.png) no-repeat top left;
+	z-index:2;
+}
+
+#projects_banner #cur_banner{
+	background:url(../images/projects/current_projects_hover.png);
+	height:36px;
+	width:124px; 
+}
+
+#projects_banner #up_banner{
+	background:url(../images/projects/completed_projects_hover.png);
+	height:36px;
+	width:148px; 
+}
+
+#current{
+	background:url(../images/projects/current_background.jpg) no-repeat left top;
+	width:949px;
+	padding:10px 0 0 85px;
+}
+
+
+
+
+/*
+	about
+*/
+
+#about_banner{
+	margin: 0px 0 -4px -4px;
+	width:963px;
+	height:59px;
+	background:url(../images/about/about_banner.png) no-repeat top left;
+	z-index:2;
+}
+/*
+#about_banner ul{
+	padding:18px 0 0 250px;
+}
+
+#about_banner ul li{
+	display:inline;
+	margin:0;
+	padding:0 35px 0 20px;
+}
+*/
+
+#about_banner #our_team{
+	background:url(../images/about/our_team_hover.png);
+	height:36px;
+	width:71px; 
+}
+
+#about_banner #ashleys_story{
+	background:url(../images/about/ashleys_story_hover.png);
+	height:36px;
+	width:105px; 
+}
+
+#team{
+	width:100%;
+	margin:-78px 0 0 0;
+	padding:0 0 0 28px;
+}
+
+#team img{
+	width:264px;
+	height:164px;
+	margin:0;
+	padding:0;
+}
+
+#team .member{
+	background:url(../images/about/member_bg.jpg) repeat-y left top;
+	float:left;
+	width:264px;
+	height:164px;
+	margin:78px 0 0 25px;
+	padding:0;
+}
+
+#team .member h3{
+	float:left;
+	font: 115% Hand of Sean;
+	font-weight:1.3;
+	color:#DDD;
+	margin:7px 0 0 10px;
+}
+
+#team .member h4{
+	float:right;
+	font: 80% Lucida Sans Unicode;
+	color:#DDD;
+	padding:8px 8px 0 0;
+}
+
+#team .extend{
+	margin:-5px 0 0 0;
+	position:relative;
+	background:url(../images/about/member_bg.jpg) repeat-y left top;
+	z-index:5;
+}
+
+#team .extend p{
+	padding:7px 10px;
+	margin:0;
+	font:80% Arial;
+	z-index:5;
+}
+
+#story{
+	width:837px;
+	margin:0 0 0 0;
+	padding:0 0 0 53px;
+}
+
+#story p{
+	padding:5px 0;
+	line-height:18px;
+}
+
+#story img{
+	padding:13px 15px 7px 15px;
+}
+
+/*
+	events
+*/
+
+#events_banner{
+	width:963px;
+	height:64px;
+	background:url(../images/events/events_banner.png) no-repeat top left;
+	z-index:2;
+}
+
+#events_banner #upc_events_banner{
+	background:url(../images/events/upcoming_events_hover.png);
+	height:36px;
+	width:140px; 
+}
+
+#events_banner #prev_events_banner{
+	background:url(../images/events/previous_events_hover.png);
+	height:36px;
+	width:133px; 
+}
+
+#events_banner #photo_gallery_banner{
+	background:url(../images/events/photo_gallery_hover.png);
+	height:36px;
+	width:114px; 
+}
+
+#upcoming_events .right{
+	width:252px;
+	height:234px;
+	background:url(../images/events/skinny_details.png);
+	float:right; 
+	margin:0px 138px 0 0;
+	position:relative;
+}
+
+#upcoming_events .right img{
+	margin:0;
+}
+
+#upcoming_events .block p{
+	margin:10px 0 0 0;
+	width:387px;
+}
+
+#upcoming_events .right p{
+	padding:0 0 0 2px;
+	width:200px;
+	font:80% Arial, serif;
+	line-height:160%;
+}
+
+#upcoming_events .right b{
+	color:#999999;
+	font:140% Arial, serif;
+	font-weight:bold;
+}
+
+#upcoming_events .right pre{
+	margin:10px 0 0 2px;
+	padding:0;
+	width:200px;
+	font-size:80%;
+}
+
+/*
+	energy
+*/
+
+.section{
+	padding:20px 60px;
+}
+
+.section img{
+	padding:10px 0;
+}
+
+.section p{
+	font:12px/18px Arial, sans-serif;
+	padding:10px 0;
+}
+
+.section li{
+	font:12px/18px Arial, sans-serif;
+	padding:5px 0;
+}
+
+.section .sec_img_right{
+	padding:20px 15px 5px 15px;
+	float:right; 
+}
+
+.section .sec_img_left{
+	padding:13px 15px 7px 15px;
+	float:left; 
+	margin:0 0 0 -15px;
+}
+
+/*
+	contact form (from blue wt)
+*/
+#contactform { margin:0 0 0 200px; padding-bottom:10px; padding-left:10px; }
+#contactform * { color:#bc4a2f; }
+#contactform ol { margin:0; padding:0; list-style:none; }
+#contactform li { margin:0; padding:0; background:none; border:none; display:block; clear:both; }
+#contactform li.buttons { margin:5px 0 5px 0; clear:both; }
+#contactform label { margin:0; width:100px; display:block; padding:10px 0; color:#fff; font: normal 14px Arial, serif; float:left; }
+#contactform label span { color:#d7ba4b; }
+#contactform input.text { width:450px; border:1px solid #000; margin:2px 0; padding:5px 2px; height:16px; background:#282828; float:left; }
+#contactform textarea { width:450px; border:1px solid #000; margin:2px 0; padding:2px; background:#282828; float:left; }
+#contactform li.buttons input { padding:0; margin:10px 0 0 102px; border:0; color:#FFF; float:left; }
+#contactform h1{ padding:10px; font:22px Hand of Sean; color:#FFF; font-weight:normal; letter-spacing:1px;}
+#contactform img{ padding:10px 0px; }
+

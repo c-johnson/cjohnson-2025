@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<script src="js/jquery-1.5.js" type="text/javascript"></script>
+	<script src="js/active.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-22256207-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+	<script type="text/javascript">
+	var nWindow;
+	function popup(urlIn){
+		nWindow = window.open(urlIn,'name','height=865,width=1100');
+		if (window.focus){nWindow.focus()}
+	};
+	$(document).ready(function(){
+		$('#give').click(function(){
+			window.open("donate_pop.html", "Donate");
+			return false;
+		});
+	});
+	</script>
+	<title>
+		The World Energy Project
+	</title>
+</head>
+<body>
+	<div class="header">
+		<div class="above">
+			<a href="index.html"><img src="images/logo_sized2.png" style="float:left; padding:10px;" alt="World Energy Project logo" height="114px" /></a>
+			<img src="images/WEP_text.png" style="float:left;"/>
+			<div id="ticker_glower"><a href="donate.html"><span id="ticker"><img src="images/ticker.jpg"  /></span></a></div>
+		</div>
+		<div class="clear"></div>
+		<div class="nav">
+			<ul>
+				<li><a href="about.html"><span id="about"><img src="images/nav/about.jpg" /></span></a></li>
+				
+				<li><a href="energy.html"><span id="whyenergy"><img src="images/nav/whyenergy.jpg" /></span></a></li>
+				
+				<li><a href="projects.html"><span id="projects"><img src="images/nav/projects.jpg" /></span></a></li>
+				
+				<li class="active"><a href="donate.html"><span id="donate"><img src="images/nav/donate.jpg" /></span></a></li>
+				
+				<li><a href="events.html"><span id="events"><img src="images/nav/events.jpg" /></span></a></li>
+				
+				<li><a href="http://worldenergyproject.tumblr.com/" target="_blank" ><span id="blog"><img src="images/nav/blog.jpg" /></span></a></li>
+				
+				<li><a href="contact.html"><span id="contact"><img src="images/nav/contact.png" /></span></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="main">
+		<div class="main_content">
+			<img style="margin:2px 0 0px -14px;" class="banner" src="images/donate/donate_banner.png" />
+			<br /><br />
+			<div style="background:url(images/donate/donate_bg.jpg); width:949px; height:392px;">
+				<form style="margin:346px 0 0 586px; float:left;" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="DK8G3VJXRXQE2">
+					<input id="give" type="image" src="images/give_now.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			</div>
+			<br /><br /><br />
+			<img style="padding:0; margin:0 0 -4px 0;" src="images/footer/footer_border.png"/>
+		</div>
+	</div>
+</body>
+<div class="footer">
+	<div class="footer_body">
+		<div class="keep_in_touch">
+			<img src="images/footer/keep_in_touch.jpg" />
+			<div class="clear"></div>
+			<div class="nav">
+				<ul>		
+					<li ><a href="http://www.facebook.com/pages/The-World-Energy-Project/163773480301865"><span id="fb_hover"><img src="images/footer/fb_icon.jpg" /></span></a></li>
+					<li ><a href="http://twitter.com/#!/wep_ne"><span id="t_hover"><img src="images/footer/t_icon.jpg" /></span></a></li>
+					<li ><a href="http://worldenergyproject.org/blog/?feed=rss2"><span id="rss_hover"><img src="images/footer/rss_icon.jpg" /></span></a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<br />
+			<p style="color:#555;">All photos attributed to <a style="color:#888;" href="http://www.jordanwilliamgreen.com/">Jordan Green</a></p>			
+		</div>
+		<div class="check_us_out">
+			<img src="images/footer/check_us_out.png" />
+			<div class="sitemap_row">
+				<p><a href="about.html">ABOUT US</a><br />
+				<a href="about.html#story">Ashley's story</a><br />
+				<a href="about.html#team">our team</a>
+				</p>
+				<p><a href="energy.html">WHY ENERGY?</a><br />
+				<a href="energy.html#healthcare">healthcare</a><br />
+				<a href="energy.html#education">education</a><br />
+				<a href="energy.html#employment">employment</a>
+				</p>
+				<p><a href="projects.html">PROJECTS</a><br />
+				<a href="projects.html#current">current project</a><br />
+				<a href="projects.html#upcoming">upcoming projects</a><br />
+				</p>
+			</div>
+			<div class="clear"></div>
+			<div class="sitemap_row" style="padding:10px 0 0 0;">
+				<p><a href="blog">BLOG</a><br />
+				</p>
+				<p><a href="donate.html">DONATE</a><br />
+				</p>
+				<p><a href="events.html">EVENTS</a><br />
+				<a href="events.html#upcoming_events">upcoming events</a><br />
+				<a href="events.html#previous_events">past event recaps</a><br />
+				</p>
+			</div>
+			<div class="sitemap_row">
+			</div>
+		</div>
+	</div>
+</div>
+</html>
