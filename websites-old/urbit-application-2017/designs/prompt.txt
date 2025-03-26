@@ -1,0 +1,15 @@
+Task: Get as much of the "Junglegym" mockup completed as you can in 1 hour.
+
+Requirements:
+  - Focus on functionality before visuals
+
+  - I'll be pairing with you as your "backend developer"
+    - Using mockfile.js, I'll fill in the fake "fetch" function with any sample data you need to consume.
+    - However, you define the schema. Whatever schema you think you'll need to represent the visual elements on the page, I'll implement.
+    - Don't worry about getting the schema right the first time; this is an interactive process
+
+  - Visuals:
+    - If you have Sketch, great -- a sketch file is provided
+      - If not, no worries. I'll pair as your "designer" and provide CSS values
+    - Don't worry about responsive / mobile concerns
+    - If you need any assets, just ask
