@@ -1,0 +1,11 @@
+K, 3/13/26
+--
+
+~1pm;
+  - GCP, ~big grant for various services
+    - Hosting costs for website 
+    - Backend services [various -- fill in]
+    - Marketing & ad spend 
+  - App launch
+    - Live in Google Play
+    - Still pending on Apple
