@@ -56,31 +56,37 @@
     <script>
         (function () {
             var gallery = document.getElementById('gallery');
-            var totalImages = 50;
-            var imagePath = './assets/images/';
+            var basePath = './assets/images/';
 
-            // Generate gallery markup
-            // Expects files named: 1.jpg, 2.jpg, 3.jpg ... 50.jpg
-            for (var i = 1; i <= totalImages; i++) {
-                var a = document.createElement('a');
-                a.href = imagePath + i + '.jpg';
-                a.className = 'glightbox';
-                a.setAttribute('data-gallery', 'gallery1');
-                a.setAttribute('data-title', 'Photo ' + i);
+            fetch(basePath + 'images.json')
+                .then(function (res) { return res.json(); })
+                .then(function (files) {
+                    files.forEach(function (file) {
+                        var a = document.createElement('a');
+                        a.href = basePath + file;
+                        a.className = 'glightbox';
+                        a.setAttribute('data-gallery', 'gallery1');
 
-                var img = document.createElement('img');
-                img.src = imagePath + i + '.jpg';
-                img.alt = 'Photo ' + i;
-                img.loading = 'lazy';
+                        // Use filename (minus extension) as caption
+                        var name = file.split('/').pop().replace(/\.[^.]+$/, '');
+                        a.setAttribute('data-title', name);
 
-                a.appendChild(img);
-                gallery.appendChild(a);
-            }
+                        var img = document.createElement('img');
+                        img.src = basePath + file;
+                        img.alt = name;
+                        img.loading = 'lazy';
 
-            // Initialize GLightbox
-            var lightbox = GLightbox({
-                loop: true
-            });
+                        a.appendChild(img);
+                        gallery.appendChild(a);
+                    });
+
+                    // Initialize GLightbox after images are in the DOM
+                    GLightbox({ loop: true });
+                })
+                .catch(function (err) {
+                    gallery.textContent = 'Could not load images.json';
+                    console.error(err);
+                });
         })();
     </script>
 
