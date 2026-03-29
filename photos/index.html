@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.1/css/glightbox.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #111;
+            font-family: sans-serif;
+            color: #fff;
+        }
+
+        .gallery {
+            max-width: 1260px;   /* 3 x 400px + gutters */
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .gallery a {
+            display: block;
+            overflow: hidden;
+            line-height: 0;     /* kill inline-image whitespace */
+        }
+
+        .gallery a img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 3 / 2;
+            background: #222;   /* placeholder color while loading */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gallery" id="gallery"></div>
+
+    <!-- GLightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.1/js/glightbox.min.js"></script>
+
+    <script>
+        (function () {
+            var gallery = document.getElementById('gallery');
+            var totalImages = 50;
+            var imagePath = './assets/images/';
+
+            // Generate gallery markup
+            // Expects files named: 1.jpg, 2.jpg, 3.jpg ... 50.jpg
+            for (var i = 1; i <= totalImages; i++) {
+                var a = document.createElement('a');
+                a.href = imagePath + i + '.jpg';
+                a.className = 'glightbox';
+                a.setAttribute('data-gallery', 'gallery1');
+                a.setAttribute('data-title', 'Photo ' + i);
+
+                var img = document.createElement('img');
+                img.src = imagePath + i + '.jpg';
+                img.alt = 'Photo ' + i;
+                img.loading = 'lazy';
+
+                a.appendChild(img);
+                gallery.appendChild(a);
+            }
+
+            // Initialize GLightbox
+            var lightbox = GLightbox({
+                loop: true
+            });
+        })();
+    </script>
+
+</body>
+</html>
