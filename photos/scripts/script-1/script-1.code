@@ -1,0 +1,4 @@
+bash:
+
+# Run this from your project root whenever you add/remove images
+ls assets/images/ | sort > assets/images.json
