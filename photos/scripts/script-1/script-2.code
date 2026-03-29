@@ -1,0 +1,24 @@
+#!/bin/bash
+# generate-manifest.sh
+# Run from your project root whenever you add or remove images.
+# Recursively finds all image files in assets/images/ and writes
+# a JSON array of relative paths to assets/images/images.json
+ 
+DIR="assets/images"
+ 
+find "$DIR" -type f \( \
+    -iname '*.jpg' -o \
+    -iname '*.jpeg' -o \
+    -iname '*.png' -o \
+    -iname '*.gif' -o \
+    -iname '*.webp' -o \
+    -iname '*.avif' \
+\) | sed "s|^$DIR/||" | sort | awk '
+BEGIN { print "[" }
+NR > 1 { printf ",\n" }
+{ printf "  \"%s\"", $0 }
+END { printf "\n]\n" }
+' > "$DIR/images.json"
+ 
+echo "Wrote $(grep -c '\"' "$DIR/images.json") images to $DIR/images.json"
+ 
